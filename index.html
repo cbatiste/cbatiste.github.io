@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <title>Kasizzle page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
+      integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ=="
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Exo:wght@200;400;600&display=swap"
+      rel="stylesheet">
+
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+      integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.min.js"
+      integrity="sha512-u60RZhsQhxJA7fqX4ek1kuhflszOTVeqDxEKb5ewa3KxegvBpZyeYZMm/wBZTFmVZwgt9SaqsmR0ICjQXaqH2w=="
+      crossorigin="anonymous"></script>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/page.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid p-0">
+      <div id="header">
+        <h1>KASIZZLE</h1>
+      </div>
+
+      <div id="sidebar">
+        <div class="sidebar-collapse">
+          <button class="btn btn-outline-dark text-white" onclick="toggleSidebar();"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="sidebar-content" style="display: none;">
+          <a class="item page-me" onclick="showPage(this, '#page-me');">Me</a>
+          <a class="item page-music" onclick="showPage(this, '#page-music');">Music</a>
+          <a class="item page-videos" onclick="showPage(this, '#page-videos');">Videos</a>
+          <a class="item page-photos" onclick="showPage(this, '#page-photos');">Photos</a>
+          <a class="item page-relevant" onclick="showPage(this, '#page-relevant');">Relevant People</a>
+          <div class="social">
+            <iframe class="mt-2"
+              src="https://open.spotify.com/follow/1/?uri=spotify:artist:5HAbkJVLDtTYmngkW16mrk&size=detail&theme=dark&show-count=0"
+              width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;"
+              allowtransparency="true"></iframe>
+            <div class="pt-3">
+              <a class="social-link" href="https://www.instagram.com/kasizzle/" target="_blank"><i
+                  class="fab fa-instagram mr-1"></i> Instagram</a>
+              <a class="social-link" href="https://music.apple.com/se/artist/kasizzle/1513360621" target="_blank"><i
+                  class="fab fa-apple mr-1"></i> Apple Music</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-container" class="row no-gutters">
+        <div class="col">
+          <div id="pages-container">
+            <div class="page" id="page-me">
+              <div class="banner-me"></div>
+              <div class="content mt-5">
+                <div class="bio">
+                  <h2>About Me</h2>
+                  <div class="section">
+                    <p>
+                      Hello! My name is Erik Larsson I live in Stockholm, Sweden and I'm 18 years old. I was born in
+                      Singapore, and I've also lived in Thailand and Belgium. I play rugby, like racing, dabble in
+                      basketball and am on the grind to become the middle weight champion of the world in boxing. I like
+                      making music and videos with my friends and I guess I'm just a pretty cool guy in general.
+                    </p>
+                  </div>
+
+                  <h2>Useful Stuff</h2>
+                  <div class="section">
+                    <p>
+                      I can work my way around three DAW's: Logic Pro, Pro Tools and Ableton. I'm also familliar with
+                      Final Cut Pro on the video editing side of things. My main instrument is the guitar, but I also
+                      play the piano, bass and drums. All my music is played, mixed and mastered by myself as well. The
+                      vocals in my music are all me, but sometimes I like to mix in my friends' voices to add a bit of
+                      character. For more on the individual songs themselves, check out the <a href="#"
+                        onclick="showPage('#sidebar .page-music', '#page-music');" class="btn btn-link p-0">music
+                        page</a>. There you can see how I made them, and the thought process behind them.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" id="page-music">
+              <div class="content">
+                <div class="music-container"></div>
+              </div>
+            </div>
+
+            <div class="page" id="page-videos">
+              <div class="content">
+                <div class="video-container m-auto" style="width: 500px;">
+                  <div class="text-center mb-3">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ju6fmDhChj4"
+                      style="border:none;"></iframe>
+                  </div>
+                  <h4>Fuck! - Kasizzle</h4>
+                  <p>I made this music video with my friend Elliot. We run a small production house called EE
+                    Productions. Fuck! is our first visual work.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" id="page-photos">
+              <div class="content">
+                <div class="grid" id="photo-library">
+                  <div class="grid-sizer"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" id="page-contact">
+              <div class="content"></div>
+            </div>
+
+            <div class="page" id="page-relevant">
+              <div class="content">
+                <div class="person-card">
+                  <img src="" />
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="info-pull" style="display:none;">
+        <div class="info-pull-collapse" onclick="collapseInfoPull();"><i class="fa fa-chevron-right"></i></div>
+        <div class="info-pull-close text-right" onclick="hideInfoPull();"><i class="fa fa-times fa-2x"></i></div>
+
+        <div class="content">
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
