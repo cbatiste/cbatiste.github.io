@@ -97,7 +97,7 @@ a, a:hover, a:focus {
 }
 
 #page-me .banner-me {
-  background-image: url(/assets/image/0001.jpg);
+  background-image: url(assets/image/0001.jpg);
   height: 500px;
   background-size: 105%;
   background-position: center;
